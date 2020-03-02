@@ -14,15 +14,21 @@ public class singleLinkedList<E>implements Adt<E> {
         return response;
     }
 
-    public void addFirst(E item){
 
+    public void addFirst(E item){
+    head=new Node(item,head);
+    size++;
     }
+
 
 
     @Override
     public void add(E Item) {
 
+
     }
+
+
 
     @Override
     public E remove(E Item) {
