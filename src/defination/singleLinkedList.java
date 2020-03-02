@@ -20,6 +20,15 @@ public class singleLinkedList<E>implements Adt<E> {
     size++;
     }
 
+    public void addAfter(E Item, Node<E> afterNode){
+        Node<E> temp=afterNode.getNext();
+        if(temp==null){
+            afterNode.next=new Node<>(Item,null);
+        }
+        else{
+            afterNode.next=new Node<>(Item,afterNode.next);
+        }
+    }
 
 
     @Override
