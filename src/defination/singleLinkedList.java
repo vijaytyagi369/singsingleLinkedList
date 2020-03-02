@@ -2,8 +2,23 @@ package defination;
 import adt.Adt  ;
 
 public class singleLinkedList<E>implements Adt<E> {
+    private Node<E>head=null;
+    public int size=0;
 
-    
+    public Node<E>getNode(int index){
+
+        Node<E> response=head;
+        for (int i = 0; i <index && response!=null ; i++) {
+            response=response.getNext();
+        }
+        return response;
+    }
+
+    public void addFirst(E item){
+
+    }
+
+
     @Override
     public void add(E Item) {
 
