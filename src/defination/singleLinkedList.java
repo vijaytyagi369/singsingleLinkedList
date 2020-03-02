@@ -30,10 +30,21 @@ public class singleLinkedList<E>implements Adt<E> {
         }
     }
 
+    public void add(int index,E Item){
+        if(index<0 || index>size){
+            throw new IndexOutOfBoundsException();
+        }
+        else if(index==0){
+            addFirst(Item);
+        }
+        else{
+            addAfter(Item,getNode(index-1));
+        }
+    }
 
     @Override
     public void add(E Item) {
-
+        add(size,Item);
 
     }
 
